@@ -1,6 +1,6 @@
 # The Midnight theme
 
-[![.github/workflows/ci.yaml](https://github.com/pages-themes/midnight/actions/workflows/ci.yaml/badge.svg)](https://github.com/pages-themes/midnight/actions/workflows/ci.yaml) [![Gem Version](https://badge.fury.io/rb/jekyll-theme-midnight.svg)](https://badge.fury.io/rb/jekyll-theme-midnight)
+[![.github/workflows/ci.yaml](https://github.com/Frederisk/Midnight-Enhanced/actions/workflows/ci.yaml/badge.svg)](https://github.com/Frederisk/Midnight-Enhanced/actions/workflows/ci.yaml)
 
 *Midnight is a Jekyll theme for GitHub Pages. You can [preview the theme to see what it looks like](http://pages-themes.github.io/midnight), or even [use it today](#usage).*
 
@@ -13,7 +13,7 @@ To use the Midnight theme:
 1. Add the following to your site's `_config.yml`:
 
     ```yml
-    remote_theme: pages-themes/midnight@v0.2.0
+    remote_theme: Frederisk/Midnight-Enhanced@v0.2.0
     plugins:
     - jekyll-remote-theme # add this line to the plugins list if you already have one
     ```
@@ -42,6 +42,25 @@ Additionally, you may choose to set the following optional variables:
 show_downloads: ["true" or "false" (unquoted) to indicate whether to provide a download URL]
 google_analytics: [Your Google Analytics tracking ID]
 ```
+
+### Language
+
+By default, the language of your website, which is the `lang` attribute on the `<html>` tag, is set to `en-US`. You can change this by setting the `lang` variable in your site's `_config.yml`:
+
+```yml
+lang: zh-TW
+```
+
+Furthermore, you can also set a specific language for each page by adding the `lang` variable to the page's front matter:
+
+```markdown
+---
+lang: zh-TW
+---
+
+# 這是一個中文頁面
+```
+
 
 ### Stylesheet
 
