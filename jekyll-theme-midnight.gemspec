@@ -1,16 +1,16 @@
 # frozen_string_literal: true
 
 Gem::Specification.new do |s|
-  # s.name          = "jekyll-theme-midnight"
-  # s.version       = "0.2.0"
-  # s.license       = "CC0-1.0"
+  s.name          = "jekyll-theme-midnight-enhanced"
+  s.version       = "0.2.1"
+  s.license       = "MIT"
   s.authors       = ["Matt Graham", "GitHub, Inc.", "R. W. Frederisk Holme"]
-  # s.email         = ["opensource+jekyll-theme-midnight@github.com"]
+  s.email         = [ "frederisk@sample.com" ]
   s.homepage      = "https://github.com/pages-themes/midnight"
   s.summary       = "Midnight is a Jekyll theme for GitHub Pages"
 
   s.files         = `git ls-files -z`.split("\x0").select do |f|
-    f.match(%r{^((_includes|_layouts|_sass|assets)/|(LICENSE|README)((\.(txt|md|markdown)|$)))}i)
+    f.match(%r{^((_includes|_layouts|_sass|assets|utils)/|(LICENSE|README)((\.(txt|md|markdown)|$)))}i)
   end
 
   s.required_ruby_version = ">= 2.4.0"
