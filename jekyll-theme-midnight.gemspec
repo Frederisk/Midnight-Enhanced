@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.version       = "0.2.1"
   s.license       = "MIT"
   s.authors       = ["Matt Graham", "GitHub, Inc.", "R. W. Frederisk Holme"]
-  s.email         = [ "frederisk@sample.com" ]
+  s.email         = ["frederisk@sample.com"]
   s.homepage      = "https://github.com/pages-themes/midnight"
   s.summary       = "Midnight is a Jekyll theme for GitHub Pages"
 
