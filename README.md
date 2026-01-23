@@ -61,32 +61,49 @@ lang: zh-TW
 # 這是一個中文頁面
 ```
 
-
 ### Stylesheet
 
 If you'd like to add your own custom styles:
 
 1. Create a file called `/assets/css/style.scss` in your site
 2. Add the following content to the top of the file, exactly as shown:
+
     ```scss
     ---
     ---
 
     @import "{{ site.theme }}";
     ```
+
 3. Add any custom CSS (or Sass, including imports) you'd like immediately after the `@import` line
 
 *Note: If you'd like to change the theme's Sass variables, you must set new values before the `@import` line in your stylesheet.*
+
+### Configurable JavaScript and CSS
+
+If you'd like to able to freely import certain JavaScript or CSS into specific pages or sites, you can create the necessary file in the `utils/js` or `utils/css` directories. Then use the following configuration at the top of your page or in your site's `_config.yml`:
+
+```yml
+custom_css: [ css_file1, css_file2 ] # without the `utils/(css/js)/` prefix and `.css/.js` suffix
+custom_js: js_file # For a single file, you can omit the array syntax
+```
+
+In particular, the `MathJax` has been predefined in `utils/js/` to provide mathematical formula rendering support. To enable it, simply add the following to your page's front matter or your site's `_config.yml`:
+
+```yml
+custom_js: MathJax
+```
 
 ### Layouts
 
 If you'd like to change the theme's HTML layout:
 
 1. For some changes such as a custom `favicon`, you can add custom files in your local `_includes` folder. The files [provided with the theme](https://github.com/pages-themes/midnight/tree/master/_includes) provide a starting point and are included by the [original layout template](https://github.com/pages-themes/midnight/blob/master/_layouts/default.html).
-2. For more extensive changes, [copy the original template](https://github.com/pages-themes/midnight/blob/master/_layouts/default.html) from the theme's repository<br />(*Pro-tip: click "raw" to make copying easier*)
-3. Create a file called `/_layouts/default.html` in your site
-4. Paste the default layout content copied in the first step
-5. Customize the layout as you'd like
+1. For more extensive changes, [copy the original template](https://github.com/pages-themes/midnight/blob/master/_layouts/default.html) from the theme's repository
+    (*Pro-tip: click "raw" to make copying easier*)
+1. Create a file called `/_layouts/default.html` in your site
+1. Paste the default layout content copied in the first step
+1. Customize the layout as you'd like
 
 ### Customizing Google Analytics code
 
@@ -98,11 +115,13 @@ Templates often rely on URLs supplied by GitHub such as links to your repository
 
 1. Look at [the template source](https://github.com/pages-themes/midnight/blob/master/_layouts/default.html) to determine the name of the variable. It will be in the form of `{{ site.github.zip_url }}`.
 2. Specify the URL that you'd like the template to use in your site's `_config.yml`. For example, if the variable was `site.github.url`, you'd add the following:
+
     ```yml
     github:
       zip_url: http://example.com/download.zip
       another_url: another value
     ```
+
 3. When your site is built, Jekyll will use the URL you specified, rather than the default one provided by GitHub.
 
 *Note: You must remove the `site.` prefix, and each variable name (after the `github.`) should be indent with two space below `github:`.*
