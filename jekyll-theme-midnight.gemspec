@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Gem::Specification.new do |s|
-  s.name          = "jekyll-theme-midnight-enhanced"
+  s.name          = "jekyll-theme-midnight"
   s.version       = "0.2.1"
   s.license       = "MIT"
   s.authors       = ["Matt Graham", "GitHub, Inc.", "R. W. Frederisk Holme"]
