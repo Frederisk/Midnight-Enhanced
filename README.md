@@ -81,14 +81,14 @@ If you'd like to add your own custom styles:
 
 ### Configurable JavaScript and CSS
 
-If you'd like to able to freely import certain JavaScript or CSS into specific pages or sites, you can create the necessary file in the `utils/js` or `utils/css` directories. Then use the following configuration at the top of your page or in your site's `_config.yml`:
+If you'd like to able to freely import certain JavaScript or CSS into specific pages or sites, you can create the necessary file in the `assets/utils/js` or `assets/utils/css` directories. Then use the following configuration at the top of your page or in your site's `_config.yml`:
 
 ```yml
-custom_css: [ css_file1, css_file2 ] # without the `utils/(css/js)/` prefix and `.css/.js` suffix
+custom_css: [ css_file1, css_file2 ] # without the `assets/utils/(css/js)/` prefix and `.css/.js` suffix
 custom_js: js_file # For a single file, you can omit the array syntax
 ```
 
-In particular, the `MathJax` has been predefined in `utils/js/` to provide mathematical formula rendering support. To enable it, simply add the following to your page's front matter or your site's `_config.yml`:
+In particular, the `MathJax` has been predefined in `assets/utils/js/` to provide mathematical formula rendering support. To enable it, simply add the following to your page's front matter or your site's `_config.yml`:
 
 ```yml
 custom_js: MathJax
